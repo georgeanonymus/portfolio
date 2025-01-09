@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Mwangi Muchiri - Medical Student & Software Engineer</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <style>
+        .skill-bar {
+            transition: width 1s ease-in-out;
+        }
+
+        .project-card {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .achievement-badge {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            transition: transform 0.3s ease;
+        }
+
+        .achievement-badge:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-slate-900 to-slate-800 text-white min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-slate-900/90 backdrop-blur-sm z-50 p-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-400">Simon Mwangi Muchiri</h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
+                <a href="#achievements" class="hover:text-blue-400 transition-colors">Achievements</a>
+                <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+                <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+                <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+                <a href="#download-cv" class="hover:text-blue-400 transition-colors">Download CV</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden" onclick="toggleMobileMenu()">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-slate-900/95 backdrop-blur-sm">
+            <div class="flex flex-col p-4 space-y-4">
+                <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
+                <a href="#achievements" class="hover:text-blue-400 transition-colors">Achievements</a>
+                <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+                <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+                <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-12 px-4">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+            <div data-aos="fade-right">
+                <h2 class="text-4xl font-bold mb-4">
+                    Medical Student &
+                    <span class="text-blue-400 block">Software Engineer</span>
+                </h2>
+                <p class="text-lg text-gray-300 mb-6">
+                    Bridging healthcare and technology through innovative solutions. Presidential Award recipient for
+                    Scientific Innovation.
+                </p>
+                <div class="flex items-center space-x-4">
+                    <i data-lucide="stethoscope" class="text-blue-400"></i>
+                    <span class="text-gray-300">MBChB Student at Egerton University</span>
+                </div>
+                <div class="flex items-center space-x-4 mt-2">
+                    <i data-lucide="code-2" class="text-blue-400"></i>
+                    <span class="text-gray-300">Specialized in Embedded Systems & Rust</span>
+                </div>
+            </div>
+            <div class="relative" data-aos="fade-left">
+                <div class="aspect-square rounded-full bg-blue-400/30 flex items-center justify-center overflow-hidden">
+                    <img src="dp.webp" alt="Simon Muchiri" class="w-full h-full object-contain object-center">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-12 px-4 bg-slate-800/30">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-2xl font-bold mb-8" data-aos="fade-up">Notable Achievements</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="achievement-badge p-6 rounded-lg" data-aos="fade-up">
+                    <div class="flex items-start space-x-4">
+                        <i data-lucide="award" class="text-yellow-400 w-8 h-8"></i>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">Presidential Award for Scientific Innovation</h4>
+                            <p class="text-gray-300">Personally recognized by President William Ruto for exceptional
+                                contributions to robotics and technological innovation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievement-badge p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-start space-x-4">
+                        <i data-lucide="presentation" class="text-yellow-400 w-8 h-8"></i>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2">NACOSTI Conference Presenter</h4>
+                            <p class="text-gray-300">Selected as the only high school presenter at the 2nd NACOSTI
+                                Conference, demonstrating innovative robotics solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-2xl font-bold mb-8" data-aos="fade-up">Technical Skills</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-6" data-aos="fade-right">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-blue-400">Rust (Embedded Systems)</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="h-2 bg-blue-400/20 rounded-full">
+                            <div class="h-full bg-blue-400 rounded-full skill-bar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-blue-400">Python</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="h-2 bg-blue-400/20 rounded-full">
+                            <div class="h-full bg-blue-400 rounded-full skill-bar" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-blue-400">JavaScript (Vue.js, Nuxt.js)</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="h-2 bg-blue-400/20 rounded-full">
+                            <div class="h-full bg-blue-400 rounded-full skill-bar" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-4" data-aos="fade-left">
+                    <h4 class="text-xl font-semibold text-blue-400">Areas of Expertise</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center space-x-2">
+                            <i data-lucide="check-circle" class="text-blue-400 w-5 h-5"></i>
+                            <span>Medical Technology Integration</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i data-lucide="check-circle" class="text-blue-400 w-5 h-5"></i>
+                            <span>Embedded Systems Development</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i data-lucide="check-circle" class="text-blue-400 w-5 h-5"></i>
+                            <span>Web Development</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i data-lucide="check-circle" class="text-blue-400 w-5 h-5"></i>
+                            <span>Automation Solutions</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i data-lucide="check-circle" class="text-blue-400 w-5 h-5"></i>
+                            <span>Robotics Programming</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-12 px-4 bg-slate-800/50">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-2xl font-bold mb-8" data-aos="fade-up">Featured Projects</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Project Card 1 -->
+                <div class="project-card bg-slate-900 rounded-lg p-6 border border-slate-700" data-aos="fade-up">
+                    <div class="mb-4">
+                        <i data-lucide="robot" class="text-blue-400 w-8 h-8 mb-2"></i>
+                        <h4 class="text-xl font-semibold mb-2 text-blue-400">EV3 Robot - KSEF 2023</h4>
+                        <p class="text-gray-300 mb-4">Award-winning robotics project presented at Kenya Science &
+                            Engineering Fair 2023. Regional champion in Central Kenya.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-blue-400/10 rounded-full text-sm text-blue-300">EV3</span>
+                            <span class="px-2 py-1 bg-blue-400/10 rounded-full text-sm text-blue-300">Robotics</span>
+                            <span class="px-2 py-1 bg-blue-400/10 rounded-full text-sm text-blue-300">Innovation</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="project-card bg-slate-900 rounded-lg p-6 border border-slate-700" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="mb-4">
+                        <i data-lucide="shopping-bag" class="text-blue-400 w-8 h-8 mb-2"></i>
+                        <a href="https://craftedinkenya.store" target="_blank">
+                            <h4 class="text-xl font-semibold mb-2 text-blue-400 hover:underline">Crafted in Kenya</h4>
+                        </a>
+                        <p class="text-gray-300 mb-4">Full-stack e-commerce platform showcasing Kenyan artisans and
+                            their crafts. Features secure payments and order tracking.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-blue-400/10 rounded-full text-sm text-blue-300">Vue.js</span>
+                            <span class="px-2 py-1 bg-blue-400/10 rounded-full text-sm text-blue-300">Node.js</span>
+                            <span class="px-2 py-1 bg-blue-400/10 rounded-full text-sm text-blue-300">E-commerce</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="project-card bg-slate-900 rounded-lg p-6 border border-slate-700" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="mb-4">
+                        <i data-lucide="file-text" class="text-blue-400 w-8 h-8 mb-2"></i>
+                        <a href="https://github.com/cyclictriad/web-scraper" target="_blank">
+                            <h4 class="text-xl font-semibold mb-2 text-blue-400 hover:underline">Web Automation</h4>
+                        </a>
+                        <p class="text-gray-300 mb-4">Intelligent system for automated exam creation and distribution
+                            with Stuvia integration. Streamlines educational content management.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-blue-400/10 rounded-full text-sm text-blue-300">Nuxt.js</span>
+                            <span class="px-2 py-1 bg-blue-400/10 rounded-full text-sm text-blue-300">Automation</span>
+                            <span class="px-2 py-1 bg-blue-400/10 rounded-full text-sm text-blue-300">Web
+                                Scraping</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-2xl font-bold mb-8" data-aos="fade-up">About Me</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div data-aos="fade-right">
+                    <p class="text-gray-300 leading-relaxed">
+                        As a medical student at Egerton University with a passion for technology, I represent a unique
+                        blend of healthcare and software engineering. My journey is marked by notable achievements,
+                        including the Presidential Award for Scientific Innovation and being selected as the only high
+                        school presenter at the NACOSTI Conference.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed mt-4">
+                        I specialize in embedded systems programming and medical technology integration, constantly
+                        seeking ways to innovate in healthcare through technical solutions. My experience spans from
+                        robotics competitions to developing e-commerce platforms.
+                    </p>
+                    <div class="mt-6 space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="book" class="text-blue-400"></i>
+                            <span>MBChB Student - Present</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="mountain" class="text-blue-400"></i>
+                            <span>Hiking & Cycling Enthusiast</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="music" class="text-blue-400"></i>
+                            <span>Country Music Lover</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-4" data-aos="fade-left">
+                    <h4 class="text-xl font-semibold text-blue-400">Education & Timeline</h4>
+                    <div class="space-y-6">
+                        <div class="border-l-2 border-blue-400 pl-4">
+                            <div class="text-sm text-gray-400">Present</div>
+                            <div class="font-semibold">Egerton University</div>
+                            <div class="text-gray-300">Bachelor of Medicine and Surgery (MBChB)</div>
+                        </div>
+                        <div class="border-l-2 border-blue-400 pl-4">
+                            <div class="text-sm text-gray-400">2020 - 2023</div>
+                            <div class="font-semibold">Murang'a High School</div>
+                            <div class="text-gray-300">
+                                • Robotics Team Lead
+                                • Outstanding achievement in Sciences
+                            </div>
+                        </div>
+                        <div class="border-l-2 border-blue-400 pl-4">
+                            <div class="text-sm text-gray-400">2011 - 2019</div>
+                            <div class="font-semibold">Primary Education</div>
+                            <div class="text-gray-300">Archbishop Gitari & Gathigiriri Primary Schools</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 px-4 bg-slate-800/30">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-2xl font-bold mb-8 text-center" data-aos="fade-up">Get in Touch</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Contact Form -->
+                <div class="bg-slate-900/50 p-6 rounded-lg" data-aos="fade-right">
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" name="name"
+                                class="w-full px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 focus:border-blue-400 focus:outline-none"
+                                required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" name="email"
+                                class="w-full px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 focus:border-blue-400 focus:outline-none"
+                                required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Message</label>
+                            <textarea name="message"
+                                class="w-full px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 focus:border-blue-400 focus:outline-none h-32"
+                                required></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full py-2 px-4 bg-blue-400 text-white rounded-lg hover:bg-blue-500 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="space-y-6" data-aos="fade-left">
+                    <div>
+                        <h4 class="text-xl font-semibold text-blue-400 mb-4">Connect With Me</h4>
+                        <div class="space-y-4">
+                            <a href="mailto:muchiri.esmwangi@gmail.com"
+                                class="flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                                <span>muchiri.esmwangi@gmail.com</span>
+                            </a>
+                            <a href="https://wa.me/+254753936201"
+                                class="flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                                <span>+254 753 936 201</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold text-blue-400 mb-4">Social Links</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/georgeanonymus" target="_blank"
+                                class="text-gray-300 hover:text-blue-400 transition-colors">
+                                <i data-lucide="github" class="w-6 h-6"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/george-mwangi-2636012a1" target="_blank"
+                                class="text-gray-300 hover:text-blue-400 transition-colors">
+                                <i data-lucide="linkedin" class="w-6 h-6"></i>
+                            </a>
+                            <a href="https://www.instagram.com/favou_redgeorge" target="_blank"
+                                class="text-gray-300 hover:text-blue-400 transition-colors">
+                                <i data-lucide="instagram" class="w-6 h-6"></i>
+
+                            </a>
+                            <!-- WhatsApp Link -->
+                            <a href="https://wa.me/254758642580" target="_blank"
+                                class="text-gray-300 hover:text-green-400 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-whatsapp w-6 h-6" viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                                </svg>
+                            </a>
+                            <!-- Telegram Link -->
+                            <!-- <a href="https://t.me/esmwangi" target="_blank"
+                                class="text-gray-300 hover:text-blue-500 transition-colors">
+                                <i class="w-6 h-6" data-lucide="send"></i>
+                            </a> -->
+                        </div>
+                    </div>
+                    <div>
+                        <a href="GEORGE NGUGI MWANGI RESUME.pdf" download="GEORGE NGUGI MWANGI RESUME" id="download-cv"
+                            class="inline-flex items-center space-x-2 py-2 px-4 bg-blue-400 text-white rounded-lg hover:bg-blue-500 transition-colors">
+                            <i data-lucide="download" class="w-5 h-5"></i>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Modal -->
+    <div id="loadingModal" class="fixed inset-0 flex justify-center items-center bg-slate-900/90 hidden z-50">
+        <div class="bg-slate-800 p-8 rounded-lg max-w-sm w-full border border-slate-700 shadow-lg transform transition-all duration-300"
+            data-aos="zoom-in" data-aos-duration="300">
+            <div class="flex flex-col items-center space-y-4">
+                <div class="animate-spin">
+                    <i data-lucide="loader-2" class="w-10 h-10 text-blue-400"></i>
+                </div>
+                <p class="text-slate-300 text-center">Sending your message...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 flex justify-center items-center bg-slate-900/90 hidden z-50">
+        <div class="bg-slate-800 p-8 rounded-lg max-w-sm w-full border border-slate-700 shadow-lg transform transition-all duration-300"
+            data-aos="zoom-in" data-aos-duration="300">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-lg font-semibold text-slate-100">Success</h3>
+                <button id="closeSuccess"
+                    class="text-slate-400 hover:text-slate-200 transition-colors p-1 hover:bg-slate-700 rounded-full">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div class="flex flex-col items-center space-y-4">
+                <div class="relative">
+                    <i data-lucide="check-circle" class="w-12 h-12 text-emerald-400"></i>
+                    <div class="absolute inset-0 text-emerald-400 animate-ping opacity-30">
+                        <i data-lucide="check-circle" class="w-12 h-12"></i>
+                    </div>
+                </div>
+                <p class="text-slate-300 text-center">Thank you for your message! I will get back to you soon.</p>
+                <button onclick="closeModal('successModal')"
+                    class="mt-4 px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg transition-colors duration-200 w-full">
+                    Got it
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="errorModal" class="fixed inset-0 flex justify-center items-center bg-slate-900/90 hidden z-50">
+        <div class="bg-slate-800 p-8 rounded-lg max-w-sm w-full border border-slate-700 shadow-lg transform transition-all duration-300"
+            data-aos="zoom-in" data-aos-duration="300">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-lg font-semibold text-slate-100">Error</h3>
+                <button id="closeError"
+                    class="text-slate-400 hover:text-slate-200 transition-colors p-1 hover:bg-slate-700 rounded-full">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div class="flex flex-col items-center space-y-4">
+                <div class="relative">
+                    <i data-lucide="alert-triangle" class="w-12 h-12 text-rose-400"></i>
+                    <div class="absolute inset-0 text-rose-400 animate-pulse opacity-30">
+                        <i data-lucide="alert-triangle" class="w-12 h-12"></i>
+                    </div>
+                </div>
+                <p class="text-slate-300 text-center">Failed to send message. Please try again later.</p>
+                <button onclick="closeModal('errorModal')"
+                    class="mt-4 px-4 py-2 bg-rose-500 hover:bg-rose-600 text-white rounded-lg transition-colors duration-200 w-full">
+                    Try Again
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-slate-900 py-6 text-center text-gray-400">
+        <p>&copy; 2024 Simon Muchiri. All rights reserved.</p>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
